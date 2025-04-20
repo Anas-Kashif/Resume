@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas Kashif - Resume</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            flex-wrap: wrap; 
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 30px;
+            background-color: #f0f0f0;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-info {
+            flex: 1;
+            min-width: 200px; 
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #445;
+        }
+
+        .title {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #667;
+        }
+
+        .summary {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 0;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+            flex-wrap: wrap; 
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            gap: 10px; 
+        }
+
+        .contact-item {
+            font-size: 14px;
+            text-align: center; 
+        }
+
+        .contact-item a {
+            color: #007bff; 
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline; 
+        }
+
+        @media (min-width: 768px) {
+            .contact-items {
+                flex-direction: row; 
+                justify-content: center;
+                gap: 20px; 
+            }
+
+            .contact-item {
+                text-align: left; 
+            }
+        }
+
+        /* Main Content */
+        main {
+            display: flex;
+            gap: 100px;
+            padding: 20px;
+            flex-wrap: wrap; 
+        }
+
+        /* Sidebar - Left Column */
+        aside {
+            flex: 1;
+            min-width: 250px; 
+        }
+
+        /* Article - Right Column */
+        article {
+            flex: 2;
+            min-width: 300px; 
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #000;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+
+        }
+
+        .section-content {
+            padding-left: 10px;
+        }
+
+        /* Skills Section */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Projects Section */
+        .project {
+            margin-bottom: 15px;
+        }
+
+        /* Languages Section */
+        .language {
+            margin-bottom: 10px;
+        }
+
+        .language-name {
+            font-weight: bold;
+        }
+
+        .language-level {
+            font-style: italic;
+        }
+
+        /* Interests Section */
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            padding: 20px;
+        }
+
+        /* Responsive Section */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-picture {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .contact-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-item {
+                margin: 10px 0;
+            }
+
+            main {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            aside, article {
+                min-width: 100%; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 16px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+
+            .title {
+                font-size: 16px;
+            }
+
+            .summary {
+                font-size: 14px;
+            }
+
+            .contact-item {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Profile Picture -->
+    <header>
+        <div class="profile-picture">
+        
+            <img src="dp.png" alt="Anas Kashif">
+        </div>
+        <div class="header-info">
+            <h1 class="name">Anas Kashif</h1>
+            <p class="title">Developer | Software Engineer | Tech Enthusiast</p>
+            <p class="summary">Dynamic Developer in software and web development.</p>
+        </div>
+    </header>
+    
+    <!-- contact section -->
+    <div class="contact-section">
+        <div class="contact-items">
+            <div class="contact-item">
+                Email: <a href="mailto:umtanas@gmail.com">umtanas@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                Phone: +923305488291
+            </div>
+            <div class="contact-item">
+                LinkedIn: <a href="https://linkedin.com/in/anas-kashif-53a2912bb" target="_blank">linkedin.com/in/anas-kashif-53a2912bb</a>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Main Content with Two-Column Layout -->
+    <main>
+        <!-- Left Column - Education only -->
+        <aside>
+            <section>
+                <h2>EDUCATION</h2>
+                <div class="section-content">
+                    <div class="education-item">
+                        <div class="education-degree"><strong>Intermediate in ICS</strong></div>
+                        <div class="education-institution">Aspire College</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-degree"><strong>Bachelor's in SE</strong></div>
+                        <div class="education-institution">University of Management & Technology</div>
+                    </div>
+                </div>
+            </section>
+        </aside>
+        
+        <!-- Right Column - Skills, Projects, Languages, Interests -->
+        <article>
+            <!-- Skills Section -->
+            <section>
+                <h2>SKILLS</h2>
+                <div class="section-content">
+                    <div class="skills-list">
+                        <div class="skill">C++</div>
+                        <div class="skill">DBMS</div>
+                        <div class="skill">Python</div>
+                        <div class="skill">HTML</div>
+                        <div class="skill">CSS</div>
+                        <div class="skill">Js</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Projects Section -->
+            <section>
+                <h2>PERSONAL PROJECTS</h2>
+                <div class="section-content">
+                    <div class="project">
+                        <strong>1. Inventory Management System in C++</strong>
+                        <p>A comprehensive system designed to manage inventory for businesses. It includes features such as stock tracking, automated restocking alerts, and detailed reporting. The project demonstrates proficiency in object-oriented programming, file handling, and data structures in C++.</p>
+                    </div>
+                    <div class="project">
+                        <strong>2. Sales Management System in C++</strong>
+                        <p>A robust application for managing sales data, customer records, and generating invoices. This project showcases advanced C++ concepts, including database integration, modular programming, and user-friendly interfaces.</p>
+                    </div>
+                    <div class="project">
+                        <strong>3. Login & Registration System in C++</strong>
+                        <p>A secure and efficient system for user authentication and account management. It features password encryption, input validation, and error handling. This project highlights expertise in C++ security practices and algorithm implementation.</p>
+                    </div>
+                    <div class="project">
+                        <strong>4. Email Spam Detection using Python</strong>
+                        <p>A machine learning project aimed at identifying spam emails with high accuracy. It utilizes Python libraries such as Scikit-learn and Pandas for data preprocessing, feature extraction, and model training. The project demonstrates knowledge of supervised learning algorithms and data analysis techniques.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Languages Section -->
+            <section>
+                <h2>LANGUAGES</h2>
+                <div class="section-content">
+                    <div class="language">
+                        <span class="language-name">English</span>
+                        <div class="language-level">Professional Working Proficiency</div>
+                    </div>
+                    <div class="language">
+                        <span class="language-name">Urdu</span>
+                        <div class="language-level">Native or Bilingual Proficiency</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Interests Section -->
+            <section>
+                <h2>INTERESTS</h2>
+                <div class="section-content">
+                    <div class="interests-list">
+                        <div class="interest">Coding</div>
+                        <div class="interest">Marketing</div>
+                        <div class="interest">Debugging</div>
+                        <div class="interest">Tech Learning</div>
+                        <div class="interest">Artificial Intelligence</div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Anas Kashif. All rights reserved.</p>
+    </footer>
+</body>
+</html>
